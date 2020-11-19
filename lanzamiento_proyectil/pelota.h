@@ -19,6 +19,9 @@ public:
     void mover_arriba();
     void mover_abajo();
 
+    // Anexo de proyectil  //
+    void mover_proyectil(signed long long int x , signed long long int y);
+
     QRectF boundingRect() const override;
     void paint(QPainter *painter , const QStyleOptionGraphicsItem *option ,QWidget *widget =nullptr);
 

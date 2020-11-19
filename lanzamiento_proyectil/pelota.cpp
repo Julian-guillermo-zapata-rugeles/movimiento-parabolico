@@ -50,6 +50,13 @@ void pelota::mover_abajo()
     posicion_y=posicion_y+velocity;
     setPos(posicion_x,posicion_y);
 }
+
+void pelota::mover_proyectil(signed long long x, signed long long y)
+{
+    posicion_x=x;
+    posicion_y=y;
+    setPos(posicion_x,posicion_y);
+}
 // #################################################################################
 
 

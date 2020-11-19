@@ -7,6 +7,7 @@ movimientoParabolico::movimientoParabolico(signed long long angulo_, signed long
     movimientoParabolico::velocidad_inicial_x =velocidad_instantanea_ * cos((angulo_*3.1416)/180);
     movimientoParabolico::velocidad_inicial_y =velocidad_instantanea_ * sin((angulo_*3.1416)/180);
     movimientoParabolico::tmp = 0;
+    movimientoParabolico::tiempo = 0 ;
 }
 
 void movimientoParabolico::getVelocidades()
@@ -16,10 +17,10 @@ void movimientoParabolico::getVelocidades()
     std::cout << "y "<<velocidad_inicial_y << std::endl;
 }
 
-signed int movimientoParabolico::obtenerCoordenadas(unsigned short int tiempo)
+int movimientoParabolico::obtenerCoordenadas(double tiempo)
 {
-    posicion_x = velocidad_inicial_x*tiempo;
-    posicion_y=tmp+velocidad_inicial_y*tiempo+(0.5*(-10*tiempo*tiempo));
+    posicion_x = float(velocidad_inicial_x*tiempo);
+    posicion_y=float(tmp+velocidad_inicial_y*tiempo+(0.5*(-10*tiempo*tiempo)));
 
     std::cout << "posicion x -> "<< posicion_x << std::endl;
     std::cout << "posicion y -> "<< posicion_y << std::endl;
@@ -29,4 +30,15 @@ signed int movimientoParabolico::obtenerCoordenadas(unsigned short int tiempo)
 signed int movimientoParabolico::get_y_position()
 {
     return posicion_y;
+}
+
+signed int movimientoParabolico::get_x_position()
+{
+    return posicion_x;
+}
+
+double movimientoParabolico::agregar_tiempo(double seconds_)
+{
+    tiempo=tiempo+seconds_;
+    return tiempo;
 }

@@ -1,3 +1,8 @@
+/*
+Julián Guillermo Zapata Rugeles
+librería movimiento parabólico
+
+*/
 #ifndef MOVIMIENTOPARABOLICO_H
 #define MOVIMIENTOPARABOLICO_H
 #include <math.h>
@@ -11,12 +16,15 @@ class movimientoParabolico
     signed long long int velocidad_inicial_y;
     signed short int angulo;
     signed short int velocidad_instantanea ;
+    double tiempo;
 
 public:
     movimientoParabolico(signed long long int angulo_ , signed long long velocidad_instantanea_);
     void getVelocidades();
-    signed int obtenerCoordenadas(unsigned short int tiempo);
+    int obtenerCoordenadas(double tiempo_);
     signed int get_y_position();
+    signed int get_x_position();
+    double agregar_tiempo(double);
 
 };
 

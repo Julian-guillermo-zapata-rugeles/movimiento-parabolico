@@ -18,10 +18,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    movimientoparabolico.cpp \
     pelota.cpp
 
 HEADERS += \
     mainwindow.h \
+    movimientoparabolico.h \
     pelota.h
 
 FORMS += \

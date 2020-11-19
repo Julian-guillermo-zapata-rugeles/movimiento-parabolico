@@ -5,6 +5,7 @@
 #include <pelota.h>
 #include <QGraphicsScene>
 #include <QKeyEvent>
+#include "movimientoparabolico.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,6 +22,11 @@ public:
 private:
     Ui::MainWindow *ui;
     pelota *proyectil;
+    pelota *proyectil2;
+    pelota *proyectil3;
+    movimientoParabolico *lanzamiento;
+    movimientoParabolico *lanzamiento2;
+    movimientoParabolico *lanzamiento3;
     //pelota *proyectil2;
     QGraphicsScene *scene;
     void keyPressEvent(QKeyEvent *evento);
