@@ -1,3 +1,10 @@
+/*
+Autor : Julián Guillermo Zapata Rugeles
+      
+Trayectoria de proyectiles disparados dado un angulo y velocidad instantanea
+
+
+*/
 #ifndef MOVIMIENTOPARABOLICO_H
 #define MOVIMIENTOPARABOLICO_H
 #include <math.h>
