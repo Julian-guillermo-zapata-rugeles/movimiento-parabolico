@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <pelota.h>
+#include <QGraphicsScene>
+#include <QKeyEvent>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,5 +20,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    pelota *proyectil;
+    //pelota *proyectil2;
+    QGraphicsScene *scene;
+    void keyPressEvent(QKeyEvent *evento);
 };
 #endif // MAINWINDOW_H
